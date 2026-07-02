@@ -302,17 +302,20 @@ footer{padding:40px 0 70px;border-top:1px solid var(--rule);color:var(--muted);f
 
         <!-- O3 -->
         <rect x="14" y="392" width="104" height="24" rx="7" fill="var(--o3)"/><text class="mlane" x="28" y="408" fill="#0A1230">O3</text><text class="mname" x="50" y="408">影响力/新技术</text>
-        <line class="grow" style="--len:600" x1="126" y1="405" x2="720" y2="405" stroke="var(--o3)" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="4 6" opacity=".4"/>
-        <g class="gnode"><text class="mnode" x="420" y="395" text-anchor="middle" fill="var(--muted)">本季度未实质推进 · 留白</text></g>
+        <line class="grow" style="--len:400" x1="320" y1="405" x2="720" y2="405" stroke="var(--o3)" stroke-width="3" stroke-linecap="round" marker-end="url(#aT)"/>
+        <g class="gnode" fill="var(--o3)" stroke="var(--bg)" stroke-width="1.5"><circle cx="360" cy="405" r="5.5"/><circle cx="600" cy="405" r="5.5"/></g>
+        <g class="gnode"><text class="mnode" x="360" y="390" text-anchor="middle">评测批量读写插件</text><text class="mnode" x="600" y="425" text-anchor="middle" fill="var(--o3)">扩散·3m半径深度使用</text></g>
 
         <!-- feedback arrows -->
         <g class="gnode">
           <path d="M432 197 L432 118" fill="none" stroke="var(--feed)" stroke-width="2.4" marker-end="url(#aF)"/>
           <path d="M462 217 L462 293" fill="none" stroke="var(--feed)" stroke-width="2.6" marker-end="url(#aF)"/>
           <path d="M500 293 L500 217" fill="none" stroke="var(--feed)" stroke-width="2.6" stroke-dasharray="5 4" marker-end="url(#aF)"/>
+          <path d="M608 317 L604 393" fill="none" stroke="var(--feed)" stroke-width="2.4" marker-end="url(#aF)"/>
           <text class="mfeed" x="440" y="160">机制化→创意版</text>
           <text class="mfeed" x="456" y="262" text-anchor="end">经验→方法</text>
           <text class="mfeed" x="506" y="262">方法→加速</text>
+          <text class="mfeed" x="614" y="362">方法→工具化</text>
         </g>
       </svg>
     </div>
@@ -421,6 +424,7 @@ footer{padding:40px 0 70px;border-top:1px solid var(--rule);color:var(--muted);f
     <div class="steps rv d2">
       <div class="step"><div class="sn">5 月初</div><div class="st">《PBTI 追热效果经验沉淀》</div><div class="sd">把追热链路里踩过的坑与判断，先沉淀成经验文档。</div></div>
       <div class="step"><div class="sn">5 月中下旬</div><div class="st">《AI 自动化规划思考》</div><div class="sd">进一步抽象出生产三原子操作：<code>数据生产 / 数据运输 / 数据分流</code>，把复杂链路拆成可组合的基本动作。</div></div>
+      <div class="step"><div class="sn">全季度</div><div class="st">《模型评测批量自动读写》使用文档</div><div class="sd">方法沉下来不只是给自己看：我把评测批量读写插件写成一份可照做的文档，让 3m 内的同学都能上手——这也是"数据生产 / 运输 / 分流"三原子操作的一次真实工具化落地，详见 <a href="#o3" style="color:var(--o4)">O3 · 影响力</a>。</div></div>
     </div>
 
     <div class="figs rv d1">
@@ -444,9 +448,18 @@ footer{padding:40px 0 70px;border-top:1px solid var(--rule);color:var(--muted);f
         <h2>把方法，<br>向外辐射</h2>
       </div>
     </div>
-    <p class="sub rv d1">这条线本季度没有实质推进——原计划里的产品化 / 工具化尚未落地，如实留白。它更像是下一个季度的接口：机制与方法已经就位，向外辐射是自然的下一步。</p>
+    <p class="sub rv d1">这条线没有宏大的产品化叙事，但有一个真实、自发扩散的落点：我顺手搓了一个工作流插件——<b>《模型评测批量自动读写》</b>，把飞书表格 / 多维表格与 AEEA 打通，按行号<b>批量读取 Prompt → 生成 → 自动写回</b>表格，把模型评测里最枯燥的读写环节自动化掉，还写了一份文档给大家用。</p>
 
-    <div class="qmark rv d1" style="margin-top:36px">本季度无对应交付 · 留白，不注水</div>
+    <div class="steps rv d2" style="margin-top:40px">
+      <div class="step"><div class="sn">插件</div><div class="st">模型评测批量自动读写</div><div class="sd">飞书表格 / 多维表格 ×  AEEA 打通：上传行号即可批量指定评测行，<code>读 Prompt → 生成 → 写回</code>全自动。同时支持普通表格与多维表格两种源，读写节点对称配置。</div></div>
+      <div class="step"><div class="sn">文档</div><div class="st">写给大家的使用说明</div><div class="sd">从"给表格添加 AEEA 应用"、两种表格源的启用方式，到"如何批量"，配图逐步讲清——不只自己用，而是让别人也能照着跑起来。</div></div>
+      <div class="step"><div class="sn">扩散</div><div class="st">从 3m 半径长出来的影响力</div><div class="sd">插件已扩散到我<b>座位半径 3m 内</b>的同学都在用，受到<b>老橘、祥鹏、新奇</b>等人深度使用、实打实提效。影响力不是喊出来的，是被人反复打开用出来的。</div></div>
+    </div>
+
+    <div class="note rv d1" style="border-left-color:var(--o3)">
+      <div class="nl" style="color:var(--o3)">这条线的真实分量</div>
+      <p>它不大，但它是本季度<b>唯一被别人主动复用</b>的自造工具——一个单点提效插件，从我的座位向外自然扩散。这恰好呼应了场外问答里的那个权衡：<b>先做一个点、再往外延展</b>，见效确实更快。</p>
+    </div>
   </div>
 </section>
 
@@ -474,6 +487,10 @@ footer{padding:40px 0 70px;border-top:1px solid var(--rule);color:var(--muted);f
       <div class="fcard">
         <div class="dir"><span class="from" style="background:rgba(53,208,186,.16);color:var(--o1)">O1</span><span class="arw">──→</span><span class="to" style="background:rgba(242,176,76,.16);color:var(--o2)">O2</span></div>
         <div class="ftx">AnyCook 跟车失败后，O1 的机制化生产帮助了欣琪创意版训练的机制化提升。</div>
+      </div>
+      <div class="fcard">
+        <div class="dir"><span class="from" style="background:rgba(167,139,250,.16);color:var(--o4)">O4</span><span class="arw">──→</span><span class="to" style="background:rgba(108,140,255,.16);color:var(--o3)">O3</span></div>
+        <div class="ftx">方法沉淀被工具化成评测批量读写插件，写成文档向外扩散——沉下来的方法，长成了影响力。</div>
       </div>
     </div>
   </div>
